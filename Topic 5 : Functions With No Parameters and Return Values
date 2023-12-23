@@ -1,0 +1,126 @@
+ITEM 1 : Display Message Function
+
+using System;
+
+class Program
+{
+    public static void display()
+    {
+        Console.WriteLine("I love programming");
+    }
+
+    static void Main(string[] args)
+    {
+        display();
+    }
+}
+
+ITEM 2 : Spamming Hellos
+
+using System;
+
+class Program
+{
+    public static void hello()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            Console.WriteLine("Hello CodeChum");
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            hello();
+        }
+    }
+}
+
+ITEM 3 : Taking Breaks
+
+using System;
+
+class Program {
+    public static void printBreakLine() {
+        Console.WriteLine();
+    }
+
+    static public void Main() {
+        Console.Write("Line 1");
+        printBreakLine();
+        Console.Write("Line 2");
+        printBreakLine();
+        Console.Write("Line 3");
+        printBreakLine();
+    }
+}
+
+ITEM 4 : Love at First Code
+
+using System;
+
+class Program {
+    public static void love() {
+        for (int i = 0; i < 4; i++) {
+            Console.WriteLine(new String(' ', i * 2) + "I love programming");
+        }
+    }
+
+    static void Main(string[] args) {
+        love();
+    }
+}
+
+ITEM 5 : Number Printer
+
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        printNumbers();
+    }
+
+    public static void printNumbers()
+    {
+        Console.Write("Enter an integer: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 1; i <= n; i++)
+        {
+            Console.Write(i);
+
+            if (i != n)
+            {
+                Console.Write(", ");
+            }
+        }
+
+        Console.WriteLine();
+    }
+}
+
+ITEM 6 : How Many Hellos Do You Need?
+
+using System;
+
+class MainClass {
+    public static void printHelloWorld() {
+        Console.WriteLine("Hello World");
+    }
+    
+    static public void Main()
+    {
+        Console.Write("Enter an integer: ");
+        int n = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 0; i < n; i++)
+        {
+            printHelloWorld();
+        }
+    }
+}
+
