@@ -1,0 +1,128 @@
+ITEM 1 : I Can Tell Your Age if You Tell Me
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter your age: ");
+        int age = Convert.ToInt32(Console.ReadLine());
+        AgeTeller(age);
+    }
+
+    static void AgeTeller(int age)
+    {
+        Console.WriteLine("Your age is " + age);
+    }
+}
+
+ITEM 2 : Sum of Numbers Pt. 2
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter first integer: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter second integer: ");
+        int b = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter third integer: ");
+        int c = Convert.ToInt32(Console.ReadLine());
+
+        SumOfIntegers(a, b, c);
+    }
+
+    static void SumOfIntegers(int a, int b, int c)
+    {
+        int sum = a + b + c;
+        Console.WriteLine(sum);
+    }
+}
+
+ITEM 3 : Shrink the Character
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a character: ");
+        char ch = Convert.ToChar(Console.ReadLine());
+        WithLowerCase(ch);
+    }
+
+    static void WithLowerCase(char ch)
+    {
+        Console.WriteLine(ch.ToString() + char.ToLower(ch));
+    }
+}
+
+ITEM 4 : Fix the Broken Function Parameter
+
+using System;
+
+class Program {
+    public static void printProduct(int a, int b) {
+        int product = a * b;
+        Console.WriteLine("Product = " + product);
+    }
+
+    static void Main(string[] args) {
+        Console.Write("Enter x: ");
+        int x = int.Parse(Console.ReadLine());
+        Console.Write("Enter y: ");
+        int y = int.Parse(Console.ReadLine());
+        printProduct(x, y);
+    }
+}
+
+ITEM 5 : The Bigger One
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter first decimal number: ");
+        decimal num1 = Convert.ToDecimal(Console.ReadLine());
+
+        Console.Write("Enter second decimal number: ");
+        decimal num2 = Convert.ToDecimal(Console.ReadLine());
+
+        Max(num1, num2);
+    }
+
+    static void Max(decimal num1, decimal num2)
+    {
+        decimal maxNum = Math.Max(num1, num2);
+        Console.WriteLine("{0:F2}", maxNum);
+    }
+}
+
+ITEM 6 : Number Flipper
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter an integer: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        ReverseInt(num);
+    }
+
+    static void ReverseInt(int num)
+    {
+        char[] charArray = num.ToString().ToCharArray();
+        Array.Reverse(charArray);
+        Console.WriteLine(new string(charArray));
+    }
+}
