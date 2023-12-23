@@ -1,0 +1,132 @@
+ITEM 1 : How Much is the Product?
+
+using System;
+
+class Program {
+
+    public static int computeProduct() 
+    {
+        int a = 23, b = 5, c = 10;
+        return a * b * c;
+    }
+    
+    static void Main(string[] args)
+    {
+        int result = computeProduct();
+        Console.WriteLine(result);
+    }
+}
+
+ITEM 2 : Ten Up
+
+using System;
+
+class Program {
+
+    public static int addTen() 
+    {
+        Console.Write("Enter an integer: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        return num + 10;
+    }
+    
+    static void Main(string[] args)
+    {
+        Console.WriteLine(addTen());
+    }
+}
+
+ITEM 3 : Character Fusion
+
+using System;
+
+class Program {
+
+    public static string combineChars() 
+    {
+        Console.Write("Enter first character: ");
+        char firstChar = Convert.ToChar(Console.ReadLine());
+        
+        Console.Write("Enter second character: ");
+        char secondChar = Convert.ToChar(Console.ReadLine());
+        
+        return firstChar.ToString() + secondChar.ToString(); // aning linyaha i-combine niya ang duha ka-characters ug i-balik sila.
+    }
+    
+    static void Main(string[] args)
+    {
+        string result = combineChars(); // tawgon niya ang function ug i-store niya ang result
+        Console.WriteLine(result); // i-print niya ang unsay result.
+    }
+}
+
+ITEM 4 : Sum of Numbers
+
+using System;
+
+class MainClass {
+
+    static string ComputeSumOfNumbers()
+    {
+        Console.Write("Enter first number: ");
+        float a = float.Parse(Console.ReadLine());
+        Console.Write("Enter second number: ");
+        float b = float.Parse(Console.ReadLine());
+        Console.Write("Enter third number: ");
+        float c = float.Parse(Console.ReadLine());
+        
+        return (a + b + c).ToString("F2"); // This line computes the sum and returns it as a string formatted to 2 decimal places
+    }
+    
+    static public void Main(string[] args)
+    {
+        Console.WriteLine(ComputeSumOfNumbers()); // Call the function and print the result immediately
+    }
+}
+
+ITEM 5 : Three Times, Ten!
+
+using System;
+
+class Program {
+
+    public static int return10() 
+    {
+        return 10; // This function simply returns the integer value 10
+    }
+    
+    static void Main(string[] args)
+    {
+        int total = return10() + return10() + return10(); // Call the function 3 times and add the returned values to the total variable
+        Console.WriteLine("Total: " + total); // Print the total value
+    }
+}
+
+ITEM 6 : An Array of Three
+
+using System;
+
+class Program {
+
+    public static int[] getIntegers() 
+    {
+        int[] numbers = new int[3]; // Declare an integer array of size 3
+
+        Console.Write("Enter first integer: ");
+        numbers[0] = Convert.ToInt32(Console.ReadLine()); // Store the first integer in the array
+
+        Console.Write("Enter second integer: ");
+        numbers[1] = Convert.ToInt32(Console.ReadLine()); // Store the second integer in the array
+
+        Console.Write("Enter third integer: ");
+        numbers[2] = Convert.ToInt32(Console.ReadLine()); // Store the third integer in the array
+
+        return numbers; // Return the array
+    }
+    
+    static void Main(string[] args)
+    {
+        int[] result = getIntegers(); // Call the function and store the result in an integer array
+        Console.WriteLine(string.Join(", ", result)); // Print the values in the array, separated by a comma and a space
+    }
+}
