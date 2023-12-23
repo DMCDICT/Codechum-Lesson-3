@@ -1,0 +1,160 @@
+ITEM 1 : Factorials!
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        long fact = Factorial(num);
+        Console.WriteLine("Factorial of {0}: {1}", num, fact);
+    }
+
+    static long Factorial(int num)
+    {
+        if (num == 1)
+            return 1;
+        else
+            return num * Factorial(num - 1);
+    }
+}
+
+ITEM 2 : Fix the Broken Recursive Function
+
+using System;
+
+public class Program
+{
+    public static void printRecursively(int current, int n)
+    {
+        if(current <= n)
+        {
+            Console.Write(current + " ");
+            printRecursively(current + 1, n);
+        }
+    }
+    
+    public static void Main(string[] args)
+    {
+        int n;
+        
+        Console.Write("Enter n: ");
+        n = Convert.ToInt32(Console.ReadLine());
+        
+        printRecursively(1, n);
+    }
+}
+
+ITEM 3 : A Broken Fibonacci
+
+using System;
+
+public class Program
+{
+    public static int fib(int n)
+    {
+        if (n <= 1)
+        {
+            return n;
+        }
+    
+        return fib(n - 1) + fib(n - 2);
+    }
+     
+    public static void Main(string[] args)
+    {
+        int n;
+        
+        Console.Write("Enter which nth term: ");
+        n = Convert.ToInt32(Console.ReadLine());
+        
+        Console.Write("Nth term = " + fib(n));
+    }
+}
+
+ITEM 4 : Fix the Broken Recursive Summation
+
+using System;
+
+public class Program
+{
+    public static int computeSum(int n)
+    {
+        if (n != 0)
+        {        
+            return n + computeSum(n - 1);
+        }
+        else
+        {
+            return n;
+        }
+    }
+    
+    public static void Main(string[] args)
+    {
+        int n;
+        
+        Console.Write("Enter n: ");
+        n = Convert.ToInt32(Console.ReadLine());
+        
+        Console.Write("Sum = " + computeSum(n));
+    }
+}
+
+ITEM 5 : Numbers Lineup (Recursion Version)
+
+using System;
+
+public class Program
+{
+    public static void printRecursively(int n)
+    {
+        if (n > 0)
+        {
+            Console.Write(n);
+            if (n > 1)
+            {
+                Console.Write(", ");
+            }
+            printRecursively(n - 1);
+        }
+    }
+    
+    public static void Main(string[] args)
+    {
+        int n;
+        
+        Console.Write("Enter n: ");
+        n = Convert.ToInt32(Console.ReadLine());
+        
+        printRecursively(n);
+    }
+}
+
+ITEM 6 : CodeChum's Printer is Broken
+
+using System;
+
+public class Program
+{
+    public static void printCodeChum(int n)
+    {
+        if (n > 0)
+        {
+            Console.WriteLine("CodeChum");
+            printCodeChum(n - 1);
+        }
+    }
+    
+    public static void Main(string[] args)
+    {
+        int n;
+        
+        Console.Write("Enter n: ");
+        n = Convert.ToInt32(Console.ReadLine());
+        
+        printCodeChum(n);
+    }   
+}
