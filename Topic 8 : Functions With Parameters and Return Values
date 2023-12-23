@@ -1,0 +1,166 @@
+ITEM 1 : Sum of Two Numbers
+
+using System;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        int a, b;
+        
+        Console.Write("Enter first number: ");
+        a = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter second number: ");
+        b = Convert.ToInt32(Console.ReadLine());
+        
+        int sum = getSum(a, b);
+        
+        Console.Write("Sum = " + sum);
+    }
+
+    public static int getSum(int a, int b)
+    {
+        return a + b;
+    }
+}
+
+ITEM 2 : The Biggest One
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter first number: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter second number: ");
+        int b = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter third number: ");
+        int c = Convert.ToInt32(Console.ReadLine());
+
+        int maxVal = Max(a, b, c);
+        Console.WriteLine("Maximum Value: " + maxVal);
+    }
+
+    static int Max(int a, int b, int c)
+    {
+        return Math.Max(a, Math.Max(b, c));
+    }
+}
+
+ITEM 3 : Character Fusion Pt.2
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter first character: ");
+        char a = Convert.ToChar(Console.ReadLine());
+
+        Console.Write("Enter second character: ");
+        char b = Convert.ToChar(Console.ReadLine());
+
+        string combinedChars = CombineChars(a, b);
+        
+        foreach (char ch in combinedChars)
+        {
+            Console.WriteLine(ch);
+        }
+    }
+
+    static string CombineChars(char a, char b)
+    {
+        return string.Format("{0}{1}", a, b);
+    }
+}
+
+
+ITEM 4 : Are you Divisible?
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter first number: ");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter second number: ");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine(IsDivisibleBy(num1, num2) == 1 ? "yes" : "no");
+    }
+
+    static int IsDivisibleBy(int num1, int num2)
+    {
+        return num1 % num2 == 0 ? 1 : 0;
+    }
+}
+
+ITEM 5 : Computing Average
+
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter size of array: ");
+        int size = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Enter the numbers: ");
+        int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
+        Console.WriteLine("Average: {0:F2}", Average(numbers));
+    }
+
+    static double Average(int[] numbers)
+    {
+        double sum = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            sum += numbers[i];
+        }
+        return sum / numbers.Length;
+    }
+}
+
+ITEM 6 : The Bare Minimum
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter first value: ");
+        float a = float.Parse(Console.ReadLine());
+
+        Console.Write("Enter second value: ");
+        float b = float.Parse(Console.ReadLine());
+
+        Console.Write("Enter third value: ");
+        float c = float.Parse(Console.ReadLine());
+
+        Console.WriteLine("Minimum Value: {0:F3}", Min(a, b, c));
+    }
+
+    static float Min(float a, float b, float c)
+    {
+        return Truncate(Math.Min(a, Math.Min(b, c)), 3);
+    }
+
+    public static float Truncate(float value, int digits)
+    {
+        double multiplier = Math.Pow(10.0, digits);
+        double result = Math.Truncate(multiplier * value) / multiplier;
+        return (float)result;
+    }
+}
